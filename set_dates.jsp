@@ -48,6 +48,12 @@
     <body>
         <jsp:include page="Option.jsp"/>
         <h1>Please enter the start date and end date for vacancies!</h1>
+        <form  action="principal_logout.jsp">
+            <input style="float: right"type="submit" value="Logout"><br><br>
+        </form><br><br>
+        <form action="p_changepassword.jsp">
+            <input style="float: right" type="submit" value="Change Password"><br><br>
+        </form><br>
         <%
             try{
             String code=request.getParameter("code");
@@ -286,8 +292,5 @@ catch(Exception e)
 }
         %>
         
-        <form style="padding-left: 950px" action="principal_logout.jsp">
-            <input type="submit" value="Logout"><br><br>
-        </form>
    </body>
 </html>

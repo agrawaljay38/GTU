@@ -46,9 +46,15 @@
         
         h2{
             text-align: center
-                
-        
         }
+        input[type=submit]
+            {
+                font-size: 20px;
+                margin-top: 20px;
+                padding: 5px;
+                border-radius: 15px;
+                background-color: #A5FFCC;
+            }
     </style>
     <body>
         <%
@@ -93,6 +99,12 @@
         %>
         <jsp:include page="Option.jsp"/>
         <h1>Welcome, <%=uname%></h1>
+        <form action="principal_logout.jsp">
+            <input style="float: right" type="submit" value="Logout"><br><br>
+        </form><br><br>
+        <form action="p_changepassword.jsp">
+            <input style="float: right" type="submit" value="Change Password"><br><br>
+        </form><br>
         <h2>Here is your Department List</h2>
         <ul id="dept_list"><%
             PreparedStatement ps=con.prepareStatement("select * from ce_vacancy");

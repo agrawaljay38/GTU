@@ -50,7 +50,11 @@
         <h1>Set Vacancies</h1>
         <form style=""action="principal_logout.jsp">
             <input style="float: right" type="submit" value="Logout"><br><br>
-        </form>
+
+        </form><br><br>
+        <form action="p_changepassword.jsp">
+            <input style="float: right" type="submit" value="Change Password"><br><br>
+        </form><br>
         <%
             try{
         session=request.getSession(false);
@@ -90,7 +94,7 @@
             {
                 department=department+"Electrical Engineering";
             }
-            out.println("\n\n<h3>College Code is "+code+"\nDepartment is "+department+"\n</h3>");
+            out.println("\n\n<h3 style='text-align:center'>College Code is "+code+"\nDepartment is "+department+"\n</h3>");
             PreparedStatement ps=con.prepareStatement("select * from "+dept+"_vacancy");
             ResultSet rs=ps.executeQuery();
             while(rs.next())

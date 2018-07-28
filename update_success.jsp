@@ -99,8 +99,8 @@
                 ps.executeUpdate();
             }
         %>
-        <h1>Update successful!      <img src="tick.png" height="35px" width="35px"></h1><br><br>
-        <a id="qwe" href="/project/principal_login.jsp">Return to Home Page</a>
+        <h1>Update successful!   <img src="tick.png" height="35px" width="35px"></h1><br><br>
+        <a id="qwe" href="principal_login.jsp?ret=true">Return to Home Page</a>
         
     </body>
 </html>
