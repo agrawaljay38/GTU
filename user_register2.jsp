@@ -4,6 +4,7 @@
     Author     : DELL
 --%>
 
+<%@page import="pkg1.class1"%>
 <%@page import="java.io.*"%>
 <%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -27,10 +28,9 @@
             {
                 try
                 {
-                    out.println(email);
                     Class.forName("com.mysql.jdbc.Driver");
                     Connection con1;
-                    con1 = DriverManager.getConnection("jdbc:mysql://localhost:3309/project","root","root1");
+                    con1 = class1.getconnection();
                     PreparedStatement ps1=con1.prepareStatement("select email from user_register");
                     ResultSet rs1;
                     rs1=ps1.executeQuery();
@@ -38,7 +38,6 @@
                     {              
                         if(email.equals(rs1.getString(1)))
                         {
-                            out.println(email);
                    %>
                    <jsp:forward page="user_register.jsp"/>
                    <%           flag=1;

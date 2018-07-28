@@ -200,19 +200,15 @@
                 rd.include(request, response);
             }
         }
-        catch(Exception e)
-        {
-            out.println("You haven't choose your department!\n");
-            %>
-            <a href="next.jsp">Click here</a>  to choose your department!
-        <%
-        
+        catch(Exception e){
+             out.println("You have not selected your Departement<br>");
+             out.println("<br><a href='next.jsp'>Click here </a> to choose your Departement!");
         }
-        }
-        catch(Exception e)
-        {
-            out.println("<br><a href='/project/user_login.jsp'>Please Login!!</a>");
-        }
+      }
+      catch(Exception e)
+      {
+          out.println("<br><a href='/project/user_login.jsp'>Please Login!!</a>");
+      }
         %>
         
     </body>
