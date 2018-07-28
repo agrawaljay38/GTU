@@ -46,7 +46,7 @@
         
         h2{
             text-align: center
-          }
+        }
         input[type=submit]
             {
                 font-size: 20px;
@@ -55,7 +55,6 @@
                 border-radius: 15px;
                 background-color: #A5FFCC;
             }
-            
     </style>
     <body>
         <%
@@ -73,10 +72,6 @@
                 uname=(String)session.getAttribute("name");
                 password=(String)session.getAttribute("password");
             }
-            /*else if(ret.equals("false"))
-            {
-                ;
-            }*/
             else
             {
                 uname=request.getParameter("uname");
@@ -110,7 +105,6 @@
         <form action="p_changepassword.jsp">
             <input style="float: right" type="submit" value="Change Password"><br><br>
         </form><br>
-        
         <h2>Here is your Department List</h2>
         <ul id="dept_list"><%
             PreparedStatement ps=con.prepareStatement("select * from ce_vacancy");

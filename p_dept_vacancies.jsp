@@ -50,6 +50,7 @@
         <h1>Set Vacancies</h1>
         <form style=""action="principal_logout.jsp">
             <input style="float: right" type="submit" value="Logout"><br><br>
+
         </form><br><br>
         <form action="p_changepassword.jsp">
             <input style="float: right" type="submit" value="Change Password"><br><br>

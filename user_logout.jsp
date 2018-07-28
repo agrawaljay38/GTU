@@ -1,6 +1,6 @@
 <%-- 
-    Document   : principal_logout
-    Created on : 4 Jul, 2018, 3:13:03 AM
+    Document   : user_logout
+    Created on : 3 Jul, 2018, 11:23:43 PM
     Author     : Asus
 --%>
 
@@ -12,12 +12,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-      <%  
+        <%
             session=request.getSession(false);
             session.invalidate();
         
-            RequestDispatcher rd=request.getRequestDispatcher("/loginpage.jsp");
+            RequestDispatcher rd=request.getRequestDispatcher("/user_login.jsp");
             rd.forward(request, response);
-      %>
+        %>
     </body>
 </html>
