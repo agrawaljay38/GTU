@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Department List</title>
+        <title>Departement List</title>
     </head>
         <style>
             table{
@@ -57,11 +57,10 @@
         }
         if(!session.isNew())
         {*/
-        %>
+        %>            
         <h1>Choose Your Department</h1>
         <form action="user_logout.jsp">
-          
-                <input type="submit" style="float:right;" value="Logout">
+                <input style="float:right" type="submit" value="Logout">
         </form>
         <form action="next2.jsp" method="post">
         <table>
@@ -103,7 +102,6 @@
             out.println("Please Login");
         }*/
         %>
-        
         </table>
     </body>
 </html>

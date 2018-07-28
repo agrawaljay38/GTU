@@ -71,8 +71,11 @@
                 <tr>
                     <td></td><td  id="subrow"><input type="submit" value="Login"></td>
                 </tr>
+                    
                 </form>
             </table>
+            <br>
+            <a href="forgot_pass_user.jsp" style="padding-left: 46%">Forgot Password</a>
         <%      }
                 else
                 {
@@ -93,6 +96,8 @@
                 </tr>
                 </form>
             </table>
+            <br>
+            <a href="forgot_pass_user.jsp" style="padding-left: 46%">Forgot Password</a>
         <%
                 }    
             }
@@ -113,10 +118,13 @@
                 </tr>
                 </form>
             </table>
+            <br>
+            <a href="forgot_pass_user.jsp" style="padding-left: 46%">Forgot Password</a>
             <%
  
             }
         %>    
         
+    </form>
     </body>
 </html>

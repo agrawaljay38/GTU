@@ -70,7 +70,7 @@
                     {
                         session=request.getSession();
                         session.setAttribute("name",email);
-                        response.sendRedirect("/project/next.jsp");
+                        response.sendRedirect("/project1/next.jsp");
                         flag=1;
                     }
                 }

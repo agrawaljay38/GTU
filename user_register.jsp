@@ -9,13 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>User Register</title>
+        <title>user Registeration</title>
     </head>
     <style>
             table{
-                vertical-align: central;
+                
                 padding-top: 3%;
                 padding-left: 40%;
+                vertical-align: central;
                 
             }
             th{
@@ -50,6 +51,7 @@
             #subrow{
                 padding-top: 20px;
             }
+            
         </style>
     <body>
          <jsp:include page="Option.jsp"/>
@@ -90,7 +92,8 @@
             <tr>
                 <td></td><td  id="subrow"><input type="submit" value="Sign Up"></td>
             </tr>
-        </table><br>
+        </table>
+                <br>
                 <a id="k" href="user_login.jsp">Already have an Account!</a>
             
         </form>
