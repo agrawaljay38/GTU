@@ -54,7 +54,7 @@
         <%
         try{
         Connection con=class1.getconnection();
-        PreparedStatement ps=con.prepareStatement("select * from principal");
+        PreparedStatement ps=con.prepareStatement("select * from principal order by username");
         ResultSet rs=ps.executeQuery();
         session=request.getSession(false);
         String name=(String)session.getAttribute("name");
@@ -89,7 +89,12 @@
                 <th>
                     Password
                 </th>
-                
+                <th>
+                    Edit
+                </th>
+                <th>
+                    Delete
+                </th>
             </tr>
             <%while(rs.next())
             {
@@ -112,6 +117,12 @@
                 </td>
                 <td>
                     <%=rs.getString(5)%>
+                </td>
+                <td>
+                    <a href="admin_principal_register.jsp?name=<%=rs.getString(4)%>">Edit</a>
+                </td>
+                <td>
+                    <a href="admin_principal_delete.jsp?name=<%=rs.getString(4)%>">Delete</a>
                 </td>
             </tr>
             <%}%>
