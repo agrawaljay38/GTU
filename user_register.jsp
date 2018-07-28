@@ -51,7 +51,6 @@
             #subrow{
                 padding-top: 20px;
             }
-            
         </style>
     <body>
          <jsp:include page="Option.jsp"/>

@@ -70,7 +70,8 @@
                     {
                         session=request.getSession();
                         session.setAttribute("name",email);
-                        response.sendRedirect("/project1/next.jsp");
+                        RequestDispatcher rd=request.getRequestDispatcher("/next.jsp");
+                        rd.forward(request,response);
                         flag=1;
                     }
                 }

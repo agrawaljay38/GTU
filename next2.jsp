@@ -12,10 +12,15 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Vacancies</title>
     </head>
-    <body>
-        
-        <jsp:include page="Option.jsp"/>
-        <style>
+     <style>
+        input[type=submit],#a
+        {
+                font-size: 20px;
+                margin-top: 10px;
+                margin-left: 15px;
+                border-radius: 15px;
+                background-color: #A5FFCC;
+        }
         h1
         {
             padding: 30px;
@@ -44,7 +49,15 @@
                 font-size: 20px;
             }
         </style>
+        
+    <body>
         <%
+            String email=request.getParameter("email");
+            out.println(email);
+        %>
+        <jsp:include page="Option.jsp"/>
+        
+       <%
             try{
             session=request.getSession(false);
             String name=(String)session.getAttribute("name");
@@ -92,7 +105,13 @@
                     String id=session.getId();
         %>
         <h1><%out.println(department);%></h1>
-        <a style="float: right" href="/project/user_logout.jsp">Logout</a>
+          <form action="user_logout.jsp">
+                <input style="float:right" type="submit" value="Logout">
+        </form><br><br>
+        <form action="u_changepassword.jsp">
+                <input type="hidden" name="email" value="<%=email%>">
+                <input style="float:right" type="submit" value="Change Password">
+        </form>
         <table>
             <tr style="background-color: #65AADA">
                 <th>College</th>

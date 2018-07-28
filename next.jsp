@@ -27,7 +27,7 @@
             body{
                 background-color: #EFF3F8;
             }
-            input[type=submit]
+            input[type=submit],#a
             {
                 font-size: 20px;
                 margin-top: 10px;
@@ -48,6 +48,9 @@
     <body>
         <jsp:include page="Option.jsp"/>
         <%
+            String email=request.getParameter("email");
+        %>    
+        <%
          /*try{   
         session=request.getSession(false);
         String name=(String)session.getAttribute("name");
@@ -61,6 +64,10 @@
         <h1>Choose Your Department</h1>
         <form action="user_logout.jsp">
                 <input style="float:right" type="submit" value="Logout">
+        </form><br><br>
+        <form action="u_changepassword.jsp">
+                <input type="hidden" name="email" value="<%=email%>">
+                <input style="float:right" type="submit" value="Change Password">
         </form>
         <form action="next2.jsp" method="post">
         <table>
@@ -85,8 +92,7 @@
             <tr>
                 <th></th><th><input type="submit" value="submit"></th>
             </tr>
-              
-        
+             <input type="hidden" name="email" value="<%=email%>">  
         </form>
         <% /*
         }
